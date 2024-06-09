@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    font-family: "Nunito";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: rgba(194, 0, 0, 0.5);
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b9b6b6;
+    border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9a9797;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-color: transparent;
+}
+::-webkit-scrollbar-button:vertical:end:increment {
+    background-color: transparent;
+}
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background-color: transparent;
+}
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background-color: transparent;
+}
+
+:root {
+    --body-bg-color: #ececec;
+    --header-bg-color: white;
+    --nav-links-color-hover: #5865F2;
+    --nav-links-color: #000000;
+    --logo-color: #000000;
+}
+
+html, body {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+	background-color: #18181b;
+}
+
+.url {
+    color: #f25858;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.code {
+    color: #c2c2c2;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+
+#site-title a b {
+    position: relative;
+    color: white;
+	font-size: 20px;
+}
+
+li, a {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--nav-links-color);
+    text-decoration: None;
+    transition: all 0.5s ease;
+}
+
+header {
+    position: sticky;
+      top: 0px;
+    backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: space-between;
+    background: rgba(24, 24, 27, 0.7);
+    align-items: center;
+    padding: 10px 10%;
+    transition: all 0.5s ease;
+    z-index: 9999;
+}
+
+#logo b {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    transition: all 0.5s ease
+}
+
+#nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+#nav-links li a {
+    color: white;
+    transition: all 0.5s ease;
+
+    &:hover {
+       color: rgba(227, 9, 9, 0.7);
+    }
+}
+
+#nav-links .material-symbols-outlined {
+    /*font-size: 25px;*/
+    position: relative;
+    top: 6px;
+    right: 3px;
+}
+
+.active_tab {
+    transition: all 0.5s ease;
+    text-decoration: underline;
+    color: rgba(224, 73, 73, 0.65);
+
+    &:hover {
+       color: rgba(227, 9, 9, 0.7);
+    }
+}
+
+#header-dropdown {
+    display: none;
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    padding: 3px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    margin-left: 80%;
+}
+
+@media (max-width: 800px) {
+    #navbar {
+        position: relative;
+        display: block;
+        width: 50%;
+        display: none;
+
+        &.nav-active {
+            display: inline;
+        }
+
+        & ul {
+            margin-top: 30px;
+            margin-left: 50px;
+            position: absolute;
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        & ul li {
+            display: block;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        & ul li {
+            width: 100%;
+        }
+
+        & b {
+            width: 100%;
+            font-size: 25px;
+        }
+
+        & .material-symbols-outlined {
+            font-size: 30px;
+        }
+    }
+
+    #header-dropdown {
+        display: inline;
+    }
+}
