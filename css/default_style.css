@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+
 * {
     font-family: "Nunito";
     box-sizing: border-box;
@@ -8,7 +9,7 @@
 }
 
 ::selection {
-    background-color: rgba(194, 0, 0, 0.5);
+    background-color: var(--dark-red);
     color: white;
 }
 
@@ -26,41 +27,37 @@
     background-color: #9a9797;
 }
 
-::-webkit-scrollbar-button:vertical:start:decrement {
-    background-color: transparent;
-}
-::-webkit-scrollbar-button:vertical:end:increment {
-    background-color: transparent;
-}
-::-webkit-scrollbar-button:horizontal:start:decrement {
-    background-color: transparent;
-}
-::-webkit-scrollbar-button:horizontal:end:increment {
-    background-color: transparent;
-}
+::-webkit-scrollbar-button:vertical:start:decrement { background-color: transparent; }
+::-webkit-scrollbar-button:vertical:end:increment { background-color: transparent; }
+::-webkit-scrollbar-button:horizontal:start:decrement { background-color: transparent; }
+::-webkit-scrollbar-button:horizontal:end:increment { background-color: transparent; }
 
 :root {
-    --body-bg-color: #ececec;
-    --header-bg-color: white;
-    --nav-links-color-hover: #5865F2;
-    --nav-links-color: #000000;
-    --logo-color: #000000;
+    --default-transition: all 0.5s ease;
+    --light-red: rgb(216, 29, 29);
+    --red: rgba(227, 9, 9, 0.7);
+    --dark-red: rgba(194, 0, 0, 0.5);
+    --pale-red: rgba(224, 73, 73, 0.65);
 }
 
 html, body {
     overflow: auto;
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
-
-body {
-	background-color: #18181b;
-}
+/*html { scroll-behavior: smooth; scroll-padding-top: 30px; }*/
+body { background-color: #18181b; }
 
 .url {
-    color: #f25858;
+    color: var(--pale-red);
     text-decoration: underline;
     cursor: pointer;
+    font-weight: bold;
+    transition: var(--default-transition);
+
+    &:hover { color: var(--red); }
 }
 
 .code {
@@ -68,6 +65,7 @@ body {
     background-color: #2c2c2c;
     border-radius: 5px;
     padding: 1px 5px;
+    border: 1px solid #545454;
 }
 
 #site-title a b {
@@ -79,9 +77,9 @@ body {
 li, a {
     font-weight: 500;
     font-size: 16px;
-    color: var(--nav-links-color);
+    color: white;
     text-decoration: None;
-    transition: all 0.5s ease;
+    transition: var(--default-transition);
 }
 
 header {
@@ -94,7 +92,7 @@ header {
     background: rgba(24, 24, 27, 0.7);
     align-items: center;
     padding: 10px 10%;
-    transition: all 0.5s ease;
+    transition: var(--default-transition);
     z-index: 9999;
 }
 
@@ -102,7 +100,7 @@ header {
     cursor: pointer;
     font-size: 25px;
     color: white;
-    transition: all 0.5s ease
+    transition: var(--default-transition);
 }
 
 #nav-links li {
@@ -112,10 +110,10 @@ header {
 
 #nav-links li a {
     color: white;
-    transition: all 0.5s ease;
+    transition: var(--default-transition);
 
     &:hover {
-       color: rgba(227, 9, 9, 0.7);
+       color: var(--red);
     }
 }
 
@@ -127,12 +125,13 @@ header {
 }
 
 .active_tab {
-    transition: all 0.5s ease;
-    text-decoration: underline;
-    color: rgba(224, 73, 73, 0.65);
+    transition: var(--default-transition);
+    color: var(--pale-red);
+    border-bottom: 2px solid var(--pale-red);
 
     &:hover {
-       color: rgba(227, 9, 9, 0.7);
+        color: var(--red);
+        border-bottom: 2px solid var(--red);
     }
 }
 
@@ -148,11 +147,12 @@ header {
     margin-left: 80%;
 }
 
+
 @media (max-width: 800px) {
     #navbar {
         position: relative;
         display: block;
-        width: 50%;
+        width: 300px;
         display: none;
 
         &.nav-active {
@@ -160,21 +160,19 @@ header {
         }
 
         & ul {
-            margin-top: 30px;
-            margin-left: 50px;
+            border-radius: 8px;
+            padding-bottom: 10px;
+            margin-top: 25px;
+            margin-left: 40px;
             position: absolute;
             width: 100%;
             height: auto;
-            background-color: rgba(0, 0, 0, 0.7);
+            background: rgba(24, 24, 27, 0.7);
         }
 
         & ul li {
             display: block;
-            margin-top: 15px;
-            width: 100%;
-        }
-
-        & ul li {
+            margin-top: 10px;
             width: 100%;
         }
 

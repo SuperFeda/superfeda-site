@@ -1,17 +1,10 @@
-const border_input = document.getElementById("border-input");
-const border_radius_input = document.getElementById("border-radius-input");
-const background_input = document.getElementById("background-input");
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-const square = document.getElementById("square");
+const selectElement = (element) => {
+    element.style.backgroundColor = "rgba(194, 0, 0, 0.5)";
+    element.style.color = "#fff";
 
-border_input.addEventListener("input", () => {
-    square.style.border = border_input.value;
-});
-
-border_radius_input.addEventListener("input", () => {
-    square.style.borderRadius = border_radius_input.value;
-});
-
-background_input.addEventListener("input", () => {
-    square.style.background = background_input.value;
-});
+    sleep(5000).then(() => { element.style.backgroundColor = ""; element.style.color = ""; });
+}
