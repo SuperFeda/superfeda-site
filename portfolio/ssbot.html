@@ -39,6 +39,7 @@
                 <p>Перед тем, как я начну говорить про бота, немного расскажу о проекте, для которого он был создан. Этим проектом был SkylightServices (сокращенно SS) - студия выполняющая услуги, специализированные на Minecraft. В спектр услуг входило 12 разных услуг, вот полный список:</p>
                 <div class="images">
                     <img src="../images/png/ssbot/services.PNG">
+                    <img class="bg-image" src="../images/png/ssbot/services.PNG">
                 </div>
                 <p>Также студия была основана мной и входила в состав комплекса <a href="../parici_projects/skylight_production.html" class="url">SkylightProduction</a>, где помимо SS было еще две студии: SM и MDE. О них подробнее <a href="../parici_projects/skylight_production.html" class="url">тут</a>.</p>
                 <h2>Теперь про бота</h2>
@@ -46,6 +47,7 @@
                 <h2>Главное сообщение</h2>
                 <div class="other-img">
                     <img src=../images/png/ssbot/ssbot_title.png>
+                    <img class="bg-image" src=../images/png/ssbot/ssbot_title.png>
                     <p class="img-desc">Главное сообщение бота</p>
                 </div>
                 <p>Главное сообщение бота отправляется автоматически, после запуска бота в канал, где должно начинаться оформление заказа. ID этого канала нужно указывать в файле <a class="code">bot_data.json</a> в параметре <a class="code">order_channel_id</a>.</p>
@@ -66,15 +68,26 @@
                 <h2>Процесс оформления заказа</h2>
                 <p>Покажу это несколькими скриншотами:</p>
                 <div class="other-img">
-                    <img class="order_image" src="../images/png/ssbot/order1.png">
-                    <img class="order_image" src="../images/png/ssbot/order2.png">
-                    <img class="order_image" src="../images/png/ssbot/order3.png">
+                    <img src="../images/png/ssbot/order1.png">
+                    <img class="bg-image" src="../images/png/ssbot/order1.png">
+                </div>
+                <div class="other-img">
+                    <img src="../images/png/ssbot/order2.png">
+                    <img class="bg-image" src="../images/png/ssbot/order2.png">
+                </div>
+                <div class="other-img">
+                    <img src="../images/png/ssbot/order3.png">
+                    <img class="bg-image" src="../images/png/ssbot/order3.png">
                 </div>
                 <p>В последнем сообщении предлагается ввести промокод или оплатить услугу. Если у клиента есть промокод, который он хочет использовать, ему необходимо нажать на кнопку «Ввести промокод». После этого появится окно, в котором нужно будет указать промокод. Если промокод введён верно, клиент получит уведомление об успешной активации. В противном случае он получит сообщение о том, что промокод не был активирован, и причину этого. Затем клиенту нужно нажать на кнопку «Оплатить», после чего его заказ будет отправлен сотрудникам SS в закрытый текстовый канал, а заказчик получит ссылку для оплаты.</p>
                 <h2>Создание отзывов</h2>
                 <div class="other-img">
-                    <img class="rate_image" src="../images/png/ssbot/rate.png">
-                    <img class="rate_image" src="../images/png/ssbot/rate2.png">
+                    <img src="../images/png/ssbot/rate.png">
+                    <img class="bg-image" src="../images/png/ssbot/rate.png">
+                </div>
+                <div class="other-img">
+                    <img src="../images/png/ssbot/rate2.png">
+                    <img class="bg-image" src="../images/png/ssbot/rate2.png">
                 </div>
                 <p>Небольшое уточнение, что отзыв заполняется не в ЛС с заказчиком, а на самом Discord сервере в приватной ветке. После нажатия на кнопку отправки отзыва, отзыв отправиться в отдельный, публичный текстовый канал с отзывами и активируется таймер 20 секунд, по завершению которого ветка удалится.</p>
                 <h2>bot_config.json</h2>

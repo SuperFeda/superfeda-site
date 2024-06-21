@@ -148,7 +148,17 @@ header {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
+    ::-webkit-scrollbar {
+        width: 5px; /* ширина для вертикального скролла */
+        height: 5px; /* высота для горизонтального скролла */
+        background-color: transparent;
+    }
+
+    #header-dropdown {
+        margin-left: 75%;
+    }
+
     #navbar {
         position: relative;
         display: block;
