@@ -95,7 +95,7 @@
 	font-size: 15px;
 	color: rgb(255, 255, 255);
 	padding: 10px 20px;
-	border-radius: 5px;
+	border-radius: 10px;
 	transition: var(--default-transition);
 	border: 2px solid rgb(255, 255, 255);
 	background-color: rgba(255, 255, 255, 0.15);
@@ -123,7 +123,7 @@
 	font-size: 15px;
 	color: rgb(41, 229, 116);
 	padding: 10px 20px;
-	border-radius: 5px;
+	border-radius: 10px;
 	transition: var(--default-transition);
 	border: 2px solid rgb(41, 229, 116);
 	background-color: rgba(41, 229, 116, 0.15);
@@ -145,7 +145,7 @@
 	font-size: 15px;
 	color: rgb(0, 119, 206);
 	padding: 10px 20px;
-	border-radius: 5px;
+	border-radius: 10px;
 	transition: var(--default-transition);
 	border: 2px solid rgb(0, 119, 206);
 	background-color: rgba(0, 119, 206, 0.15);
