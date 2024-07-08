@@ -50,6 +50,12 @@ html, body {
 /*html { scroll-behavior: smooth; scroll-padding-top: 30px; }*/
 body { background-color: #18181b; }
 
+#box {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
 .url {
     color: var(--pale-red);
     text-decoration: underline;
@@ -105,15 +111,18 @@ header {
 
 #nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 5px;
 }
 
 #nav-links li a {
     color: white;
+    border-radius: 10px;
     transition: var(--default-transition);
+    padding: 10px 15px;
 
     &:hover {
-       color: var(--red);
+        background-color: rgba(0, 0, 0, 0.3);
+        color: var(--red);
     }
 }
 
@@ -173,7 +182,7 @@ header {
             border-radius: 8px;
             padding-bottom: 10px;
             margin-top: 25px;
-            margin-left: 40px;
+            margin-left: 20px;
             position: absolute;
             width: 100%;
             height: auto;

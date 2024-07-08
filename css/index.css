@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 
 #title {
 	display: flex;
-    align-items: center;
-    flex-flow: column;
-	z-index: 223;
+	flex-flow: column;
+	align-items: center;
 	padding: 10px 25px;
 	background: rgba(255, 255, 255, 0.05);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -20,17 +20,22 @@
 	/*border: 1px solid rgba(255, 255, 255, 0.18);*/
 	/*box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
 	max-width: 1000px;
-	margin-top: 12.5%;
+	margin-bottom: auto;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: auto;
 
 	& p {
-		font-size: 20px;
+		font-family: "Unbounded", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
 		color: whitesmoke;
 	}
 
 	& p a {
-		font-size: 20px;
+		font-family: "Unbounded", sans-serif;
+		font-weight: 400;
+		font-size: 18px;
 	}
 
 	& h1 {
@@ -59,8 +64,24 @@
 	right: 20%;
 }
 
-#buttons {
+#langs {
+	display: flex;
+	flex-wrap: wrap;
 	margin-top: 10px;
+	gap: 10px;
+	transition: all 0.7s;
+
+	& img {
+		transition: all 0.3s;
+	}
+
+	& img:hover {
+		transform: scale(1.07);
+	}
+}
+
+#buttons {
+	margin-top: 12px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
@@ -191,10 +212,19 @@
 		& h1 { font-size: 40px; }
 
 		& p {
-			font-size: 16px;
+			font-size: 18px;
 			color: whitesmoke;
 
 			& a { font-size: 16px; }
+		}
+	}
+
+	#langs {
+		gap: 6px;
+
+		& img {
+			width: 46px;
+			height: 46px;
 		}
 	}
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
 .cards {
     z-index: 222;
     display: flex;
@@ -21,6 +23,10 @@
         transform: scale(1.03);
         border: 1px solid rgba(255, 255, 255, 0.8);
         box-shadow: 0px 0px 17px rgba(255, 255, 255, 0.3);
+
+        .card-content img {
+            box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.3);
+        }
     }
 }
 
@@ -39,10 +45,12 @@
         margin-top: 15px;
         margin-left: 10px;
         border: 1px solid rgba(255, 255, 255, 0.5);
+        transition: all 0.7s;
     }
 
     & h1 {
-        font-size: 23px;
+        font-family: "Unbounded", sans-serif;
+        font-size: 20px;
         margin-bottom: 7px;
         margin-top: 5px;
         color: white;
