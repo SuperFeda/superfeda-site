@@ -1,2 +1,5 @@
-const openHeaderDropdown = () => { document.getElementById("navbar").classList.toggle("nav-active") }
+const openHeaderDropdown = () => {
+    document.getElementById("adap_header").classList.toggle("active-header")
+    document.getElementById("adap-nav-links").classList.toggle("active-header")
+}
 

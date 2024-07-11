@@ -14,8 +14,8 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* ширина для вертикального скролла */
-    height: 8px; /* высота для горизонтального скролла */
+    width: 7px; /* ширина для вертикального скролла */
+    height: 7px; /* высота для горизонтального скролла */
     background-color: transparent;
 }
 
@@ -54,6 +54,19 @@ body { background-color: #18181b; }
     display: flex;
     flex-direction: column;
     min-height: 100%;
+}
+
+.no-display {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
 }
 
 .url {
@@ -111,18 +124,22 @@ header {
 
 #nav-links li {
     display: inline-block;
-    padding: 0px 5px;
 }
 
 #nav-links li a {
     color: white;
     border-radius: 10px;
     transition: var(--default-transition);
-    padding: 10px 15px;
+    padding: 10px 20px;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.3);
         color: var(--red);
+
+        .active_tab {
+            color: var(--red);
+            border-bottom: 2px solid var(--red);
+        }
     }
 }
 
@@ -137,38 +154,48 @@ header {
     transition: var(--default-transition);
     color: var(--pale-red);
     border-bottom: 2px solid var(--pale-red);
+}
 
-    &:hover {
-        color: var(--red);
-        border-bottom: 2px solid var(--red);
-    }
+#adap-nav-links {
+    display: none;
+}
+#adap_header {
+    display: none;
 }
 
 #header-dropdown {
     display: none;
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     background: transparent;
-    padding: 3px 3px;
-    border-radius: 5px;
+    padding: 5px 5px;
+    border-radius: 7px;
     cursor: pointer;
     position: fixed;
-    margin-left: 80%;
+    float: right;
+    /*margin-left: 80%;*/
 }
 
 .details {
-    background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--red);
-    border-radius: 20px;
-    padding: 10px 15px;
+    border-radius: 15px;
     box-shadow: 0px 0px 400px var(--red);
     transition: all 0.7s;
     margin-right: 1%;
     margin-left: 1%;
+    overflow: hidden;
+    outline: none;
 
     & summary {
         color: white;
         font-size: 18px;
+        padding: 10px 15px;
+        background: rgba(227, 9, 9, 0.4) /*linear-gradient(190deg, rgba(227, 9, 9, 0.5), rgba(227, 9, 9, 0.2))*/;
+        box-shadow: 0 4px 35px -2px var(--red);
+    }
+
+    & p {
+        padding: 2px 15px;
     }
 }
 
@@ -180,43 +207,62 @@ header {
     }
 
     #header-dropdown {
-        margin-left: 75%;
+        margin-left: 80%;
     }
 
-    #navbar {
-        position: relative;
-        display: block;
-        width: 300px;
+    #nav-links {
         display: none;
+    }
 
-        &.nav-active {
-            display: inline;
-        }
+    header {
+        padding: 10px 5%;
+    }
 
-        & ul {
-            border-radius: 8px;
-            padding-bottom: 10px;
-            margin-top: 25px;
-            margin-left: 20px;
-            position: absolute;
-            width: 100%;
-            height: auto;
-            background: rgba(24, 24, 27, 0.7);
-        }
+    #adap_header {
+        position: absolute;
+        margin-top: 50px;
+        background-color: rgba(24, 24, 27, 0.7);
+        border-radius: 10px;
+        width: 100%;
+        padding: 10px 10px;
+        backdrop-filter: blur(7px);
+	    -webkit-backdrop-filter: blur(7px);
+        z-index: 1231;
 
-        & ul li {
+        &.active-header {
             display: block;
-            margin-top: 10px;
-            width: 100%;
         }
 
-        & b {
-            width: 100%;
-            font-size: 25px;
+        & a {
+            padding-left: 15px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            font-size: 20px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+                color: var(--red);
+                border-radius: 10px;
+
+                .active_tab {
+                    color: var(--red);
+                    border-bottom: 2px solid var(--red);
+                }
+            }
         }
 
         & .material-symbols-outlined {
-            font-size: 30px;
+            position: relative;
+            top: 6px;
+            right: 3px;
+        }
+    }
+
+    #adap-nav-links {
+        &.active-header {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
     }
 
@@ -225,13 +271,12 @@ header {
     }
 
     .details {
-        padding: 5px 9px;
-
         & summary {
             font-size: 15px;
         }
 
         & p {
+            padding: 2px 9px;
             font-size: 13px;
         }
     }

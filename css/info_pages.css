@@ -17,7 +17,7 @@ img { border-radius: 15px }
     & h1 {
         font-family: "Popins", sans-serif;
         /*text-transform: uppercase;*/
-        font-size: 70px;
+        font-size: max(30px, min(3.64vw, 70px));
         font-style: normal;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #fff;
@@ -63,8 +63,8 @@ img { border-radius: 15px }
 }
 
 .images {
-    margin-top: 10px;
     position: relative;
+    margin-top: 10px;
 
     & img {
         width: 100%;
@@ -81,15 +81,15 @@ img { border-radius: 15px }
         z-index: -3;
         left: 0%;
     }
-}
 
-.img-desc {
-    margin-top: 0%;
-    margin-bottom: 20px;
-    font-size: 16px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    .img-desc {
+        margin-top: 0%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 }
 
 
@@ -102,13 +102,22 @@ img { border-radius: 15px }
     position: relative;
 
     & img {
-        width: max(360px, 45%);
+        width: max(280px, 45%);
     }
 
     & .bg-image {
         position: absolute;
         filter: blur(60px);
         z-index: -3;
+    }
+
+    .img-desc {
+        margin-top: 0%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
     }
 }
 
@@ -217,7 +226,7 @@ img { border-radius: 15px }
 @media (max-width: 767px) {
     .desc-content {
         & h1 {
-            font-size: 40px;
+            /*font-size: 40px;*/
         }
 
         & h2 {
@@ -233,13 +242,14 @@ img { border-radius: 15px }
         }
     }
 
-    .img-desc { font-size: 10px; }
+    .images { .img-desc { font-size: 12px; } }
+    .other-img { .img-desc { font-size: 12px; } }
 }
 
 @media (max-width: 575px) {
     .desc-content {
         & h1 {
-            font-size: 35px;
+            /*font-size: 35px;*/
         }
 
         & h2 {
@@ -255,5 +265,6 @@ img { border-radius: 15px }
         }
     }
 
-    .img-desc { font-size: 6px; }
+    .images { .img-desc { font-size: 10px; } }
+    .other-img { .img-desc { font-size: 10px; } }
 }
