@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@import
+"def_styles/browser",
+"def_styles/utils",
+"def_styles/header",
+"def_styles/vars";
+
+
+* {
+    font-family: "Nunito";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #18181b;
+    line-height: 1.6;
+}
+
+#box {
+    //display: flex;
+    //flex-direction: column;
+    //min-height: 100%;
+}

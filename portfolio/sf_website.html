@@ -3,55 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <title>SF | Portfolio - SF Website</title>
+        <title>SF | Portfolio - SF's Website</title>
         <link rel="shortcut icon" type="image/x-icon" href="../images/png/site_icon.png" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="../css/default_style.css" />
         <link rel="stylesheet" href="../css/info_pages.css" />
-        <link rel="stylesheet" href="../css/sf_website.css" />
     </head>
     <body>
 
         <div id="box">
 
             <header>
+                <div class id="adap_header">
+                    <ul class id="adap-nav-links">
+                        <a href="../index.html"><b><span class="material-symbols-outlined">home</span>Главная</b></a>
+                        <a href="../portfolio.html"><b><span class="material-symbols-outlined">work</span>Портфолио</b></a>
+                        <a href="../parici_projects.html"><b><span class="material-symbols-outlined">groups</span>Участие в проектах</b></a>
+                    </ul>
+                </div>
                 <div id="site-title"><a href="../index.html"><b>SuperFeda</b></a></div>
-                <span class="material-symbols-outlined" id="header-dropdown" onclick="openHeaderDropdown()">menu</span>
                 <nav id="navbar">
                     <ul id="nav-links">
                         <li><a href="../index.html"><b><span class="material-symbols-outlined">home</span>Главная</b></a></li>
                         <li><a href="../portfolio.html"><b><span class="material-symbols-outlined">work</span>Портфолио</b></a></li>
                         <li><a href="../parici_projects.html"><b><span class="material-symbols-outlined">groups</span>Участие в проектах</b></a></li>
-                        <!--<li><a href="../market.html"><b><span class="material-symbols-outlined">shopping_cart</span>Маркет</b></a></li>-->
                     </ul>
                 </nav>
+                <span class="material-symbols-outlined" id="header-dropdown" onclick="openHeaderDropdown()">menu</span>
             </header>
-            <div class id="adap_header">
-                <ul class id="adap-nav-links">
-                    <a href="../index.html"><b><span class="material-symbols-outlined">home</span>Главная</b></a>
-                    <a href="../portfolio.html"><b><span class="material-symbols-outlined">work</span>Портфолио</b></a>
-                    <a href="../parici_projects.html"><b><span class="material-symbols-outlined">groups</span>Участие в проектах</b></a>
-                </ul>
-            </div>
 
             <div class="desc-content">
                 <h1>SF's сайт-портфолио</h1>
                 <div class="stack">
                     <h2>Stack:</h2>
                     <h3>Используемые языки:</h3>
-                    <p>HTML, CSS, JavaScript</p>
+                    <p>HTML, CSS, TypeScript</p>
                 </div>
                 <div class="images">
-                    <img src="../images/png/sf_website/sf-site.png">
-                    <img class="bg-image" src="../images/png/sf_website/sf-site.png">
+                    <img src="../images/png/sf_site/preview.PNG">
+                    <img class="bg-image" src="../images/png/sf_site/preview.PNG">
                     <p class="img-desc">Главная страница сайта</p>
                 </div>
-                <p>Особо говорить нечего, в данном случае нужно видеть. Скажу только то, что это мой второй фронтенд проект, после <a href="https://github.com/SuperFeda/web-calculator" class="url">калькулятора</a>, который я недавно переписал на Electron.</p>
-                <div class="images">
-                    <img src="../images/png/sf_website/sfs-site-old.PNG">
-                    <img class="bg-image" src="../images/png/sf_website/sfs-site-old.PNG">
-                    <p class="img-desc">Старый внешний вид сайта</p>
-                </div>
+                <p>Мой первый полноценный проект в фронтенде. Сделан на обычных TS, HTML и CSS, без фреймворков и замудренных API.</p>
             </div>
 
         </div>

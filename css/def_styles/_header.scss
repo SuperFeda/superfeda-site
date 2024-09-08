@@ -1,0 +1,148 @@
+#site-title a b {
+    position: relative;
+    color: white;
+	font-size: 20px;
+}
+
+li, a {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: None;
+    transition: var(--default-transition);
+}
+
+header {
+    position: sticky;
+      top: 0px;
+    backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: space-between;
+    background: rgba(24, 24, 27, 0.7);
+    align-items: center;
+    padding: 10px 10%;
+    transition: var(--default-transition);
+    z-index: 9999;
+}
+
+#logo b {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    transition: var(--default-transition);
+}
+
+#nav-links li {
+    display: inline-block;
+}
+
+#nav-links li a {
+    color: white;
+    border-radius: 10px;
+    transition: var(--default-transition);
+    padding: 10px 20px;
+
+    &.active_tab:hover {
+        background: rgba(224, 73, 73, 0.15);
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.15);
+        color: var(--pale-red);
+    }
+}
+
+#nav-links .material-symbols-outlined {
+    position: relative;
+    top: 6px;
+    right: 3px;
+}
+
+.active_tab {
+    transition: var(--default-transition);
+    background: rgba(224, 73, 73, 0.07);
+
+    & b {
+        color: var(--pale-red);
+    }
+}
+
+#adap-nav-links {
+    display: none;
+}
+#adap_header {
+    display: none;
+}
+
+#header-dropdown {
+    display: none;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 5px 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: fixed;
+}
+
+
+@media (max-width: 767px) {
+    #header-dropdown {
+        margin-left: 80%;
+    }
+
+    #nav-links {
+        display: none;
+    }
+
+    header {
+        padding: 10px 5%;
+    }
+
+    #adap_header {
+        position: absolute;
+        margin-top: 230px;
+        right: 0;
+        background-color: rgba(24, 24, 27, 0.7);
+        border-radius: 10px;
+        width: 100%;
+        padding: 10px 10px;
+        backdrop-filter: blur(7px);
+	    -webkit-backdrop-filter: blur(7px);
+        z-index: 1231;
+
+        &.active-header {
+            display: block;
+        }
+
+        & a {
+            padding-left: 15px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            font-size: 20px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+                color: var(--pale-red);
+            }
+        }
+
+        & .material-symbols-outlined {
+            position: relative;
+            top: 6px;
+            right: 3px;
+        }
+    }
+
+    #adap-nav-links.active-header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #header-dropdown {
+        display: inline;
+    }
+}

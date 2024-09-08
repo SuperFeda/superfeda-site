@@ -14,54 +14,71 @@
         <div id="box">
 
             <header>
+                <div class id="adap_header">
+                    <ul class id="adap-nav-links">
+                        <a href="./index.html"><b><span class="material-symbols-outlined">home</span>Главная</b></a>
+                        <a href="./portfolio.html" class="active_tab"><b><span class="material-symbols-outlined">work</span>Портфолио</b></a>
+                        <a href="./parici_projects.html"><b><span class="material-symbols-outlined">groups</span>Участие в проектах</b></a>
+                    </ul>
+                </div>
                 <div id="site-title"><a href="./index.html"><b>SuperFeda</b></a></div>
-                <span class="material-symbols-outlined" id="header-dropdown" onclick="openHeaderDropdown()">menu</span>
                 <nav id="navbar">
                     <ul id="nav-links">
                         <li><a href="./index.html"><b><span class="material-symbols-outlined">home</span>Главная</b></a></li>
-                        <li><a href="./portfolio.html"><b class="active_tab"><span class="material-symbols-outlined">work</span>Портфолио</b></a></li>
+                        <li><a href="./portfolio.html" class="active_tab"><b><span class="material-symbols-outlined">work</span>Портфолио</b></a></li>
                         <li><a href="./parici_projects.html"><b><span class="material-symbols-outlined">groups</span>Участие в проектах</b></a></li>
-                        <!--<li><a href="./market.html"><b><span class="material-symbols-outlined">shopping_cart</span>Маркет</b></a></li>-->
                     </ul>
                 </nav>
+                <span class="material-symbols-outlined" id="header-dropdown" onclick="openHeaderDropdown()">menu</span>
             </header>
-            <div class id="adap_header">
-                <ul class id="adap-nav-links">
-                    <a href="./index.html"><b><span class="material-symbols-outlined">home</span>Главная</b></a>
-                    <a href="./portfolio.html"><b class="active_tab"><span class="material-symbols-outlined">work</span>Портфолио</b></a>
-                    <a href="./parici_projects.html"><b><span class="material-symbols-outlined">groups</span>Участие в проектах</b></a>
-                </ul>
-            </div>
 
             <main>
                 <div class="cards">
 
                     <div class="card">
+                        <img src="./images/png/ssbot/ssbot_title.png">
                         <div class="card-content">
-                            <img src="./images/png/ssbot/ssbot_title.png">
-                            <h1>SkylightBot (SSBot)</h1>
+                            <h1>SkylightBot</h1>
                             <p>Discord бот для обработки заказов в SkylightServices</p>
-                            <a href="./portfolio/ssbot.html" class="card-button">Читать больше</a>
-
+                            <hr/>
+                            <div class="stack">
+                                <span class="lang python">Python</span>
+                                <span class="lang disnake">Disnake</span>
+                            </div>
+                            <hr/>
                         </div>
+                        <a href="./portfolio/ssbot.html" class="card-button">Читать больше</a>
                     </div>
 
                     <div class="card">
+                        <img src="./images/png/bw_project/bw_icon.png">
                         <div class="card-content">
-                            <img src="./images/png/sf_website/sf-site-icon.PNG">
-                            <h1>SF's сайт-портфолио</h1>
-                            <p>Мой персональный сайт</p>
-                            <a href="./portfolio/sf_website.html" class="card-button">Читать больше</a>
+                            <h1>Beautiful World (dev)</h1>
+                            <p>Мод для Minecraft с внутренним лором</p>
+                            <hr/>
+                            <div class="stack">
+                                <span class="lang java">Java</span>
+                                <span class="lang fabric">Fabric</span>
+                            </div>
+                            <hr/>
                         </div>
+                        <a href="./portfolio/beautiful_world.html" class="card-button">Читать больше</a>
                     </div>
 
                     <div class="card">
+                        <img src="./images/png/sf_site/main_win.PNG">
                         <div class="card-content">
-                            <img src="./images/png/cho_za_magazin/czm_title.PNG">
-                            <h1>Cho za magazin</h1>
-                            <p>Шаблон сайта для интернет-магазина</p>
-                            <a href="./portfolio/cho_za_magazin.html" class="card-button">Читать больше</a>
+                            <h1>SF's website</h1>
+                            <p>Мой сайт портфолио</p>
+                            <hr/>
+                            <div class="stack">
+                                <span class="lang typescript">TypeScript</span>
+                                <span class="lang html">HTML</span>
+                                <span class="lang scss">SCSS</span>
+                            </div>
+                            <hr/>
                         </div>
+                        <a href="./portfolio/sf_website.html" class="card-button">Читать больше</a>
                     </div>
 
                 </div>
