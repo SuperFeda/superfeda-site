@@ -17,7 +17,7 @@ img { border-radius: 15px }
     & h1 {
         font-family: "Popins", sans-serif;
         /*text-transform: uppercase;*/
-        font-size: max(30px, min(3.64vw, 70px));
+        font-size: max(45px, min(3.64vw, 70px));
         font-style: normal;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px #fff;
@@ -26,6 +26,7 @@ img { border-radius: 15px }
         color: white;
         margin-top: 0.5%;
         z-index: 222;
+        word-break: break-word;
     }
 
     & h2 {
@@ -182,18 +183,21 @@ img { border-radius: 15px }
     margin-top: 20px;
     box-shadow: 0px 0px 300px rgba(50, 65, 227, 0.8);
     z-index: -1;
-
-    & h2 {
-        color: white;
-        margin-top: 0;
-        font-size: 35px;
-        border-bottom: none;
-    }
-
-    & h3 {
-        color: white;
-    }
 }
+.stack-title {
+    color: white;
+    font-size: 38px;
+    margin-top: 0 !important;
+    border-bottom: none !important;
+}
+.stack-section {
+    color: white;
+    font-size: 18px;
+}
+.stack-info {
+    font-size: 16px !important;
+}
+
 
 /*.role-in-project {*/
 /*    background-color: rgba(224, 73, 73, 0.15);*/
@@ -236,6 +240,8 @@ img { border-radius: 15px }
         }
     }
 
+    .stack-title { font-size: 30px }
+    .stack-section { font-size: 18px }
     .images { .img-desc { font-size: 12px; } }
     .other-img { .img-desc { font-size: 12px; } }
 }
@@ -251,10 +257,10 @@ img { border-radius: 15px }
         }
 
         & p {
-            font-size: 13px;
+            font-size: 14px;
 
             & a {
-                font-size: 13px;
+                font-size: 14px;
             }
         }
     }

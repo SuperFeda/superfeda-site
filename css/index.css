@@ -43,7 +43,7 @@
 
 .blur_one {
   position: absolute;
-  box-shadow: 0 0 1800px 100px #1d4ed8;
+  box-shadow: 0 0 1800px 150px #1d4ed8;
   z-index: -100;
   top: 22%;
   left: 15%;
@@ -51,7 +51,7 @@
 
 .blur_second {
   position: absolute;
-  box-shadow: 0 0 1800px 110px var(--light-red);
+  box-shadow: 0 0 1800px 150px var(--light-red);
   z-index: -100;
   top: 50%;
   right: 20%;

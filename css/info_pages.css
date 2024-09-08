@@ -17,7 +17,7 @@ img {
 .desc-content h1 {
   font-family: "Popins", sans-serif;
   /*text-transform: uppercase;*/
-  font-size: max(30px, min(3.64vw, 70px));
+  font-size: max(45px, min(3.64vw, 70px));
   font-style: normal;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
@@ -26,6 +26,7 @@ img {
   color: white;
   margin-top: 0.5%;
   z-index: 222;
+  word-break: break-word;
 }
 .desc-content h2 {
   font-family: "Unbounded", sans-serif;
@@ -167,14 +168,21 @@ img {
   box-shadow: 0px 0px 300px rgba(50, 65, 227, 0.8);
   z-index: -1;
 }
-.stack h2 {
+
+.stack-title {
   color: white;
-  margin-top: 0;
-  font-size: 35px;
-  border-bottom: none;
+  font-size: 38px;
+  margin-top: 0 !important;
+  border-bottom: none !important;
 }
-.stack h3 {
+
+.stack-section {
   color: white;
+  font-size: 18px;
+}
+
+.stack-info {
+  font-size: 16px !important;
 }
 
 /*.role-in-project {*/
@@ -209,6 +217,12 @@ img {
   .desc-content p a {
     font-size: 16px;
   }
+  .stack-title {
+    font-size: 30px;
+  }
+  .stack-section {
+    font-size: 18px;
+  }
   .images .img-desc {
     font-size: 12px;
   }
@@ -224,10 +238,10 @@ img {
     font-size: 18px;
   }
   .desc-content p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .desc-content p a {
-    font-size: 13px;
+    font-size: 14px;
   }
   .images .img-desc {
     font-size: 10px;
