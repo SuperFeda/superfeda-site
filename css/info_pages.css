@@ -162,7 +162,7 @@ img {
 .stack {
   background-color: rgba(50, 65, 227, 0.15);
   border: 1px solid rgba(50, 65, 227, 0.8);
-  padding: 10px 10px;
+  padding: 0.5% 2%;
   border-radius: 10px;
   margin-top: 20px;
   box-shadow: 0px 0px 300px rgba(50, 65, 227, 0.8);
@@ -182,28 +182,10 @@ img {
 }
 
 .stack-info {
-  font-size: 16px !important;
+  font-size: 17px !important;
+  margin-top: 0 !important;
 }
 
-/*.role-in-project {*/
-/*    background-color: rgba(224, 73, 73, 0.15);*/
-/*    border: 1px solid rgba(224, 73, 73, 0.65);*/
-/*    padding: 10px 10px;*/
-/*    -webkit-border-bottom-left-radius: -25px;*/
-/*	-webkit-border-bottom-right-radius: 12px;*/
-/*	-webkit-border-top-left-radius: 12px;*/
-/*	-webkit-border-top-right-radius: -25px;*/
-/*    margin-top: 20px;*/
-/*    box-shadow: 0px 0px 300px rgba(224, 73, 73, 0.65);*/
-/*    z-index: -1;*/
-/*    & h3 {*/
-/*        color: white;*/
-/*    }*/
-/*    & p {*/
-/*        color: white;*/
-/*        margin-bottom: 0;*/
-/*    }*/
-/*}*/
 @media (max-width: 767px) {
   .desc-content h1 {
     /*font-size: 40px;*/
@@ -219,9 +201,6 @@ img {
   }
   .stack-title {
     font-size: 30px;
-  }
-  .stack-section {
-    font-size: 18px;
   }
   .images .img-desc {
     font-size: 12px;

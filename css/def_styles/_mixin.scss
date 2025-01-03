@@ -1,0 +1,5 @@
+@mixin elementActive() {
+    &:active {
+        scale: 0.95;
+    }
+}

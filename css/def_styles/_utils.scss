@@ -26,7 +26,8 @@
     background-color: #2c2c2c;
     border-radius: 5px;
     padding: 1px 5px;
-    border: 1px solid #545454;
+    font-family: JetBrainsMono;
+    font-size: 16px !important;
 }
 
 .details {
@@ -42,7 +43,7 @@
     & summary {
         color: white;
         font-size: 18px;
-        padding: 10px 15px;
+        padding: 4px 15px;
         background: rgba(227, 9, 9, 0.4);
         box-shadow: 0 4px 35px -2px var(--red);
         cursor: pointer;
@@ -65,6 +66,10 @@
             font-size: 13px;
         }
     }
+
+    .code {
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 575px) {
@@ -76,5 +81,9 @@
         & p {
             font-size: 10px;
         }
+    }
+
+    .code {
+        font-size: 12px !important;
     }
 }
