@@ -222,6 +222,9 @@ img {
   .desc-content p a {
     font-size: 14px;
   }
+  .stack-title {
+    font-size: 23px;
+  }
   .images .img-desc {
     font-size: 10px;
   }
